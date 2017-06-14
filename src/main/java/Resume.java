@@ -21,18 +21,7 @@ public class Resume {
         this.header = new Header();
         this.education = new Education();
         this.experience = new Experience();
-        parseXMLDocument(xmlResumeFile);
-    }
-
-    private static String convertToFileURL(String xmlRelativePath){
-        String path = new File(xmlRelativePath).getAbsolutePath();
-        if(File.separatorChar != '/'){
-            path = path.replace(File.separatorChar, '/');
-        }
-        if(!path.startsWith("/")){
-            path = "/" + path;
-        }
-        return path;
+        // parseXMLDocument(xmlResumeFile);
     }
 
     private static void parseXMLDocument(String xmlFile){

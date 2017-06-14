@@ -11,7 +11,7 @@ import java.io.*;
  */
 public class ResumeGenerator {
     private static String xmlRelativePath = "resources/resume.xml";
-    private static String pdfRelativePath = "results/pdfgenerated/" ;
+    private static String pdfRelativePath = "results/pdfgenerated/resume.pdf" ;
     private static String xmlResumeFile = null;
 
     public static void main(String[] args) {
