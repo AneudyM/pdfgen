@@ -11,27 +11,39 @@ import java.io.*;
  */
 public class ResumeGenerator {
     private static String xmlRelativePath = "resources/resume.xml";
-    private static String pdfRelativePath = "results/pdfgenerated/resume.pdf" ;
+    private static String pdfRelativePath = "results/pdfgenerated/" ;
+    private static String xmlResumeFile = null;
 
     public static void main(String[] args) {
-        // First, instantiate a resume
-        // Resume initialization should automatically parse the XML you pass to it.
-        Resume resume = new Resume(xmlResumeFile);
-
-        String xmlFile = convertToFileURL(xmlRelativePath);
-        parseXMLDocument(xmlFile);
         try {
-            createResume(pdfRelativePath);
-        } catch (DocumentException de){
-            System.out.println("iText could not instantiate Document");
+            xmlResumeFile = convertToFileURL(xmlRelativePath);
         } catch (FileNotFoundException fnfe){
-            System.out.println("Could not create resume file.");
+            System.out.println("XML file not found.");
         }
+        Resume resume = new Resume(xmlResumeFile);
+        try {
+            createResumePDF(resume);
+        } catch (DocumentException de){
+        } catch (FileNotFoundException fnfe){
+            System.out.println("ERROR[createResumePDF]: File " + "\'" + pdfRelativePath + "\'" +
+                    " cannot be opened.");
 
+        }
     }
 
     // Converts the file's relative path to absolute
-    public static void createPDFResume(Resume resume) throws DocumentException, FileNotFoundException {
+    private static String convertToFileURL(String xmlRelativePath) throws FileNotFoundException{
+        String path = new File(xmlRelativePath).getAbsolutePath();
+        if(File.separatorChar != '/'){
+            path = path.replace(File.separatorChar, '/');
+        }
+        if(!path.startsWith("/")){
+            path = "/" + path;
+        }
+        return path;
+    }
+
+    public static void createResumePDF(Resume resume) throws DocumentException, FileNotFoundException {
         // DataStructure with resume information parsed from XML file
         String candidateName = "Aneudy Mota";
         Paragraph header = new Paragraph(candidateName + "\n" + "Hello there");
