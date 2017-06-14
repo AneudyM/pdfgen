@@ -32,6 +32,7 @@ public class Resume {
             while(xmlStreamReader.hasNext()){
                 int event = xmlStreamReader.next();
                 // Parse the tags of the XML Document here.
+
                 
             }
         } catch (FileNotFoundException fnfe){
@@ -50,23 +51,23 @@ public class Resume {
 
         Header(){}
 
-        public void setFirstname(String fn){
+        private void setFirstname(String fn){
             firstname = fn;
         }
 
-        public void setLastname(String ln){
+        private void setLastname(String ln){
             lastname = ln;
         }
 
-        public void setEmail(String email){
+        private void setEmail(String email){
             this.email = email;
         }
 
-        public void setPhone(String phone){
+        private void setPhone(String phone){
             this.phone = phone;
         }
 
-        public void setUrls(String url){
+        private void setUrls(String url){
             urls.add(url);
         }
 
@@ -120,7 +121,7 @@ public class Resume {
             return endDate;
         }
 
-        public void setEndDate(Date endDate) {
+        private void setEndDate(Date endDate) {
             this.endDate = endDate;
         }
 
@@ -128,7 +129,7 @@ public class Resume {
             return degree;
         }
 
-        public void setDegree(String degree) {
+        private void setDegree(String degree) {
             this.degree = degree;
         }
 
@@ -136,7 +137,7 @@ public class Resume {
             return major;
         }
 
-        public void setMajor(String major) {
+        private void setMajor(String major) {
             this.major = major;
         }
     }
@@ -155,7 +156,7 @@ public class Resume {
             return jobTitle;
         }
 
-        public void setJobTitle(String jobTitle) {
+        private void setJobTitle(String jobTitle) {
             this.jobTitle = jobTitle;
         }
 
@@ -163,7 +164,7 @@ public class Resume {
             return company;
         }
 
-        public void setCompany(String company) {
+        private void setCompany(String company) {
             this.company = company;
         }
 
@@ -171,7 +172,7 @@ public class Resume {
             return city;
         }
 
-        public void setCity(String city) {
+        private void setCity(String city) {
             this.city = city;
         }
 
@@ -179,7 +180,7 @@ public class Resume {
             return country;
         }
 
-        public void setCountry(String country) {
+        private void setCountry(String country) {
             this.country = country;
         }
 
@@ -187,7 +188,7 @@ public class Resume {
             return startDate;
         }
 
-        public void setStartDate(String startDate) {
+        private void setStartDate(String startDate) {
             this.startDate = startDate;
         }
 
@@ -195,7 +196,7 @@ public class Resume {
             return endDate;
         }
 
-        public void setEndDate(String endDate) {
+        private void setEndDate(String endDate) {
             this.endDate = endDate;
         }
     }
