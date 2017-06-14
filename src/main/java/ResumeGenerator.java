@@ -46,7 +46,7 @@ public class ResumeGenerator {
     public static void createResumePDF(Resume resume) throws DocumentException, FileNotFoundException {
         // DataStructure with resume information parsed from XML file
         String candidateName = "Aneudy Mota";
-        Paragraph header = new Paragraph(candidateName + "\n" + "Hello there");
+        Paragraph header = new Paragraph(candidateName + "\n" + "aneudy.motacatalino@gmail.com");
         header.setAlignment(Element.ALIGN_CENTER);
         Document document = new Document();
         // Output file to which the PDF Resume file will be saved.
