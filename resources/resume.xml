@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Resume>
+    <Candidate id="1">
+        <Header>
+            <FirstName value="Aneudy" />
+            <LastName value="Mota" />
+            <Email value="aneudy.motacatalino@gmail.com" />
+            <Phone value="(269)350-4104" />
+            <Portfolio>
+                <Link value="https://www.github.com/AneudyM" />
+                <Link value="https://www.linkedin/in/aneudym" />
+            </Portfolio>
+        </Header>
+        <Education>
+            <School name="Western Michigan University (WMU)" type="University">
+                <Degree type="Graduate" name="Master of Arts" />
+                <Major name="Evaluation, Measurement, and Research" />
+                <Gpa value="3.5" />
+                <Location value="Kalamazoo, MI, USA" />
+                <Graduation status="No" date="April 2018"/>
+                <Description>
+                    <item>Government graduate international scholarship - 100% tuition grant (2008)</item>
+                </Description>
+            </School>
+            <School name="Western Michigan University (WMU)" type="University">
+                <Degree type="Baccalaureate" name="Bachelor of Business Administration" />
+                <Major name="Evaluation, Measurement, and Research" />
+                <Minor name="General Business" />
+                <Gpa value="2.79" />
+                <Location value="Kalamazoo, MI, USA" />
+                <Graduation status="Yes" date="April 2013"/>
+                <Description>
+                    <item>Government baccalaureate international scholarship - 100% tuition grant (2008)</item>
+                </Description>
+            </School>
+        </Education>
+    </Candidate>
+</Resume>
